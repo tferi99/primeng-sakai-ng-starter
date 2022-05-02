@@ -1,5 +1,5 @@
 {
-    "name": "sakai-ng-starter",
+    "name": "primeng-sakai-ng-starter",
     "version": "13.1.1",
     "scripts": {
         "ng": "ng",
