@@ -1,17 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html'
+  selector: 'app-root',
+  templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  menuMode = 'static';
 
-    menuMode = 'static';
+  constructor(private primengConfig: PrimeNGConfig) {}
 
-    constructor(private primengConfig: PrimeNGConfig) { }
-
-    ngOnInit() {
-        this.primengConfig.ripple = true;
-        document.documentElement.style.fontSize = '14px';
-    }
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+    document.documentElement.style.fontSize = '14px';
+  }
 }
